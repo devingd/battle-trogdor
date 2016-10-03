@@ -53,14 +53,15 @@ function fight() {
     } else if(hero.health <= 0) {
         console.warn('You\'re Dead');
         rl.close();
+    } else {
+        choice();
     }
-    choice();
 }
 
 function flee() {
     var escape = (Math.round(Math.random() * 10) > 5);
     if(escape) {
-        console.log('es-cape-ay... That spelled just escape! You made it!... coward...');
+        console.log('es-cape-ay... That spelled just escape! You made it!');
         rl.close();
     } else {
         var damage = Math.round(Math.random() * hero.attack);
